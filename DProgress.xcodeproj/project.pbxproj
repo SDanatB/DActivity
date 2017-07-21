@@ -12,9 +12,9 @@
 		FFF15D191F1F4227000F6068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF15D171F1F4227000F6068 /* Main.storyboard */; };
 		FFF15D1B1F1F4227000F6068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF15D1A1F1F4227000F6068 /* Assets.xcassets */; };
 		FFF15D1E1F1F4227000F6068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF15D1C1F1F4227000F6068 /* LaunchScreen.storyboard */; };
-		FFF15D2B1F1F4393000F6068 /* DProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF15D2A1F1F4393000F6068 /* DProgress.swift */; };
-		FFF15D2F1F1F4E81000F6068 /* DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF15D2E1F1F4E81000F6068 /* DViewController.swift */; };
 		FFF15D311F1F5AE8000F6068 /* SHActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF15D301F1F5AE8000F6068 /* SHActivityView.swift */; };
+		FFF15D331F1F6984000F6068 /* DActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF15D321F1F6984000F6068 /* DActivityView.swift */; };
+		FFFFD8C91F2061AC0044B6C0 /* DActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFFD8C81F2061AC0044B6C0 /* DActivityIndicatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +25,9 @@
 		FFF15D1A1F1F4227000F6068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFF15D1D1F1F4227000F6068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFF15D1F1F1F4227000F6068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFF15D2A1F1F4393000F6068 /* DProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DProgress.swift; sourceTree = "<group>"; };
-		FFF15D2E1F1F4E81000F6068 /* DViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DViewController.swift; sourceTree = "<group>"; };
 		FFF15D301F1F5AE8000F6068 /* SHActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHActivityView.swift; sourceTree = "<group>"; };
+		FFF15D321F1F6984000F6068 /* DActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DActivityView.swift; sourceTree = "<group>"; };
+		FFFFD8C81F2061AC0044B6C0 /* DActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DActivityIndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,6 @@
 		FFF15D251F1F424D000F6068 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FFF15D2A1F1F4393000F6068 /* DProgress.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -81,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				FFF15D151F1F4227000F6068 /* ViewController.swift */,
-				FFF15D2E1F1F4E81000F6068 /* DViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -90,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				FFF15D301F1F5AE8000F6068 /* SHActivityView.swift */,
+				FFF15D321F1F6984000F6068 /* DActivityView.swift */,
+				FFFFD8C81F2061AC0044B6C0 /* DActivityIndicatorView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -185,11 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFF15D2B1F1F4393000F6068 /* DProgress.swift in Sources */,
+				FFF15D331F1F6984000F6068 /* DActivityView.swift in Sources */,
+				FFFFD8C91F2061AC0044B6C0 /* DActivityIndicatorView.swift in Sources */,
 				FFF15D311F1F5AE8000F6068 /* SHActivityView.swift in Sources */,
 				FFF15D161F1F4227000F6068 /* ViewController.swift in Sources */,
 				FFF15D141F1F4227000F6068 /* AppDelegate.swift in Sources */,
-				FFF15D2F1F1F4E81000F6068 /* DViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +353,7 @@
 				FFF15D241F1F4227000F6068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

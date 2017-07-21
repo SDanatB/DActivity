@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var progressIcon:UIActivityIndicatorView!
-    var viewActivitySmall : SHActivityView?
+//    var progressIcon:UIActivityIndicatorView!
+//    var viewActivitySmall : SHActivityView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,56 +28,73 @@ class ViewController: UIViewController {
         self.view.addSubview(btn)
         
         
-        progressIcon = UIActivityIndicatorView()
-        progressIcon.translatesAutoresizingMaskIntoConstraints = false
-        progressIcon.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
-        self.view.addSubview(progressIcon)
+//        progressIcon = UIActivityIndicatorView()
+//        progressIcon.translatesAutoresizingMaskIntoConstraints = false
+//        progressIcon.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+//        self.view.addSubview(progressIcon)
+//        
+//        
+//        viewActivitySmall = SHActivityView()
+//        viewActivitySmall?.spinnerSize = .kSHSpinnerSizeSmall
+//        viewActivitySmall?.spinnerColor = UIColor.blue
+//        self.view.addSubview(viewActivitySmall!)
+        
+        let width: CGFloat = 160.0
+        let height: CGFloat = 160.0
+        
+//        let demoView = DActivityIndicatorView(frame: CGRect(x: self.view.frame.size.width/2 - width/2,
+//                                              y: self.view.frame.size.height/2 - height/2,
+//                                              width: width,
+//                                              height: height + 30))
+        
+//        demoView.animate()
+        
+//        self.view.addSubview(DActivityView.animate())
+        
+        DActivityView.animate(title:"wait....")
+        _ = Timer.scheduledTimer(timeInterval:3, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true);
         
         
-        viewActivitySmall = SHActivityView()
-        viewActivitySmall?.spinnerSize = .kSHSpinnerSizeSmall
-        viewActivitySmall?.spinnerColor = UIColor.blue
-        self.view.addSubview(viewActivitySmall!)
+//        UIApplication.shared.keyWindow?.addSubview(DActivityView.animate())
         
-        
-        var constraints = [NSLayoutConstraint]()
-        constraints.append(NSLayoutConstraint(
-            item: progressIcon,
-            attribute: .centerX,
-            relatedBy: .equal,
-            toItem: view,
-            attribute: .centerX,
-            multiplier: 1,
-            constant: 0)
-        )
-        constraints.append(NSLayoutConstraint(
-            item: progressIcon,
-            attribute: .centerY,
-            relatedBy: .equal,
-            toItem: view,
-            attribute: .centerY,
-            multiplier: 1,
-            constant: 0)
-        )
-        constraints.append(NSLayoutConstraint(
-            item: viewActivitySmall,
-            attribute: .centerX,
-            relatedBy: .equal,
-            toItem: view,
-            attribute: .centerX,
-            multiplier: 1,
-            constant: 0)
-        )
-        constraints.append(NSLayoutConstraint(
-            item: viewActivitySmall,
-            attribute: .centerY,
-            relatedBy: .equal,
-            toItem: view,
-            attribute: .centerY,
-            multiplier: 1,
-            constant: 0)
-        )
-        view.addConstraints(constraints)
+//        var constraints = [NSLayoutConstraint]()
+//        constraints.append(NSLayoutConstraint(
+//            item: progressIcon,
+//            attribute: .centerX,
+//            relatedBy: .equal,
+//            toItem: view,
+//            attribute: .centerX,
+//            multiplier: 1,
+//            constant: 0)
+//        )
+//        constraints.append(NSLayoutConstraint(
+//            item: progressIcon,
+//            attribute: .centerY,
+//            relatedBy: .equal,
+//            toItem: view,
+//            attribute: .centerY,
+//            multiplier: 1,
+//            constant: 0)
+//        )
+//        constraints.append(NSLayoutConstraint(
+//            item: viewActivitySmall,
+//            attribute: .centerX,
+//            relatedBy: .equal,
+//            toItem: view,
+//            attribute: .centerX,
+//            multiplier: 1,
+//            constant: 0)
+//        )
+//        constraints.append(NSLayoutConstraint(
+//            item: viewActivitySmall,
+//            attribute: .centerY,
+//            relatedBy: .equal,
+//            toItem: view,
+//            attribute: .centerY,
+//            multiplier: 1,
+//            constant: 0)
+//        )
+//        view.addConstraints(constraints)
         
         
         
@@ -87,7 +104,9 @@ class ViewController: UIViewController {
         
         
     }
-
+    func runTimedCode() {
+        DActivityView.stop()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -96,7 +115,7 @@ class ViewController: UIViewController {
     func btnAction(sender: UIButton!){
         print("Button tapped")
 //        progressIcon.startAnimating()
-        viewActivitySmall?.showAndStartAnimate()
+//        viewActivitySmall?.showAndStartAnimate()
 
         sender.isHidden = true
         sender.backgroundColor = UIColor.green.withAlphaComponent(0.4)
